@@ -1,2 +1,28 @@
-!function i(u,l,c){function f(r,e){if(!l[r]){if(!u[r]){var t="function"==typeof require&&require;if(!e&&t)return t(r,!0);if(s)return s(r,!0);var o=new Error("Cannot find module '"+r+"'");throw o.code="MODULE_NOT_FOUND",o}var n=l[r]={exports:{}};u[r][0].call(n.exports,function(e){return f(u[r][1][e]||e)},n,n.exports,i,u,l,c)}return l[r].exports}for(var s="function"==typeof require&&require,e=0;e<c.length;e++)f(c[e]);return f}({1:[function(e,r,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.sayHello=function(e){return"hello from "+e}},{}],2:[function(e,r,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o,n,i,u=e("./greet");o="Typescript",console.log("hello from "+o),console.log(u.sayHello("typeScript")),n="greeting",i="Typescript",document.getElementById(n).innerText=u.sayHello(i)},{"./greet":1}]},{},[2]);
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function sayHello(name) {
+    return "hello from " + name;
+}
+exports.sayHello = sayHello;
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var greet_1 = require("./greet");
+function hello(compiler) {
+    console.log("hello from " + compiler);
+}
+hello("Typescript");
+console.log(greet_1.sayHello("typeScript"));
+function showHello(divName, name) {
+    var elt = document.getElementById(divName);
+    elt.innerText = greet_1.sayHello(name);
+}
+showHello("greeting", "Typescript");
+
+},{"./greet":1}]},{},[2])
+
 //# sourceMappingURL=bundle.js.map
